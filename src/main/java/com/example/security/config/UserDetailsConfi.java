@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.example.security.model.User;
 
-
 public class UserDetailsConfi implements UserDetails {
 
 	User user;
@@ -28,13 +27,15 @@ public class UserDetailsConfi implements UserDetails {
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return user.getUserPassword();
+		 return user.getUserPassword();
+		// return "$2a$12$.d0NTHopmZvANS65siIJ6OxM83rUohDCYwxDWMoVyqWKcG.nBESwK";
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return user.getUserName();
+		 return user.getUserName();
+		// return "manu";
 	}
 
 	@Override

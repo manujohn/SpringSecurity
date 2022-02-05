@@ -32,4 +32,9 @@ public class UserData {
 		this.userName = userName;
 	}
 
+	@Override
+	public String toString() {
+		return "UserData [userID=" + userID + ", userName=" + userName + "]";
+	}
+
 }

@@ -13,7 +13,7 @@ public class UserService {
 
 	@Autowired
 	UserRepo userRepo;
-	
+
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
@@ -24,9 +24,16 @@ public class UserService {
 	}
 
 	public UserData saveUser(User userd) {
+
 		userd.setUserPassword(passwordEncoder.encode(userd.getUserPassword()));
 		User user = userRepo.save(userd);
 		return new UserData(user.getUserId(), user.getUserName());
 	}
+	
+	public UserData saveUserWithoutEncoding(User userd) {
+		User user = userRepo.save(userd);
+		return new UserData(user.getUserId(), user.getUserName());
+	}
+	
 
 }

@@ -6,4 +6,4 @@ java -jar target/*.jar
 http://localhost:9001/user/1
 
 username : manu
-password : 1234
+password : 123
